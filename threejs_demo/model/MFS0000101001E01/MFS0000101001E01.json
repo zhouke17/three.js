@@ -1,0 +1,38 @@
+﻿{
+	"model":"FS000010100001E-01J.gz",
+	"model_h":"",
+	"items": [
+	{
+		"product_id":"MFS0000101001E0101",
+		"model_Code":"MFS0000101001E01",
+		"Stuff_key":"01/FS000010100001E-01J.mtl",
+		"HStuff_key":"",
+		"PS_key":"01/FS000010100001E-01J.jpg",
+		"HPS_key":"",
+		"Drawing_key":"01/160.png",
+		"Top_key":"01/top.png",
+		"Display":"01/Display",
+		"Data_Source":"1",
+		"XLen":"196",
+		"YLen":"94",
+		"ZLen":"87",
+		"Product_Name":"布艺沙发",
+		"Place_Of_Origin":"福州",
+		"Grade":"一级",
+		"style":"现代简约",
+		"Specifications":"196*94*87",
+		"Article_Number":"MFS0000101001E01",
+		"Unit":"件",
+		"ThePrincipal":"",
+		"Auxiliary":"",
+		"Customized":"否",
+		"Price":"6999",
+		"vendor":"大自然",
+		"ProductCode":"010101",
+		"tp":"seating",
+		"Specific_Attributes":[
+		{
+			"适用空间":"客厅, 卧室"
+		}]
+	}]
+}

@@ -1,0 +1,49 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 07.04.2017 18:47:33
+
+newmtl Material__31
+	Ns 38.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\zhatao\Desktop\0407_2\FS0000101000004_L.jpg
+	map_Kd C:\Users\zhatao\Desktop\0407_2\FS0000101000004_L.jpg
+	map_bump C:\Users\zhatao\Desktop\0407_2\FS0000101000004_bump.jpg
+	bump C:\Users\zhatao\Desktop\0407_2\FS0000101000004_bump.jpg
+	map_refl Map__27_Raytrace.tga
+
+newmtl Material__57
+	Ns 25.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.2970 0.2970 0.2970
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\zhatao\Desktop\0407_2\FS0000101000004_L.jpg
+	map_Kd C:\Users\zhatao\Desktop\0407_2\FS0000101000004_L.jpg
+	map_bump C:\Users\zhatao\Desktop\0407_2\FS0000101000004_bump.jpg
+	bump C:\Users\zhatao\Desktop\0407_2\FS0000101000004_bump.jpg
+	map_refl Map__27_Raytrace.tga
+
+newmtl Material__58
+	Ns 28.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 2.0520 2.0520 2.0520
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__27_Raytrace.tga

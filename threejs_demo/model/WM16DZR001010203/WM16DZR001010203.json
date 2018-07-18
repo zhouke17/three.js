@@ -1,0 +1,38 @@
+﻿{
+	"model":"01010203.gz",
+	"model_h":"",
+	"items": [
+	{
+		"product_id":"WM16DZR00101020301",
+		"model_Code":"WM16DZR001010203",
+		"Stuff_key":"01/01010203.mtl",
+		"HStuff_key":"",
+		"PS_key":"01/01010203.jpg",
+		"HPS_key":"",
+		"Drawing_key":"01/160.png",
+		"Top_key":"01/top.png",
+		"Display":"01/Display",
+		"Data_Source":"1",
+		"XLen":"306",
+		"YLen":"128",
+		"ZLen":"88",
+		"Product_Name":"布艺沙发",
+		"Place_Of_Origin":"福州",
+		"Grade":"一级",
+		"style":"现代简约",
+		"Specifications":"306*128*88",
+		"Article_Number":"WM16DZR001010203",
+		"Unit":"件",
+		"ThePrincipal":"",
+		"Auxiliary":"",
+		"Customized":"否",
+		"Price":"",
+		"vendor":"",
+		"ProductCode":"",
+		"tp":"seating",
+		"Specific_Attributes":[
+		{
+			"适用空间":"客厅, 卧室"
+		}]
+	}]
+}

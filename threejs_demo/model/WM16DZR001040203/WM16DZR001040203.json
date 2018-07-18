@@ -1,0 +1,38 @@
+﻿{
+	"model":"01040203.gz",
+	"model_h":"",
+	"items": [
+	{
+		"product_id":"WM16DZR00104020301",
+		"model_Code":"WM16DZR001040203",
+		"Stuff_key":"01/01040203.mtl",
+		"HStuff_key":"",
+		"PS_key":"01/01040203.jpg",
+		"HPS_key":"",
+		"Drawing_key":"01/160.png",
+		"Top_key":"01/top.png",
+		"Display":"01/Display",
+		"Data_Source":"1",
+		"XLen":"179",
+		"YLen":"57",
+		"ZLen":"239",
+		"Product_Name":"衣柜",
+		"Place_Of_Origin":"福州",
+		"Grade":"一级",
+		"style":"欧式风格",
+		"Specifications":"179*57*239",
+		"Article_Number":"WM16DZR001040203",
+		"Unit":"件",
+		"ThePrincipal":"",
+		"Auxiliary":"",
+		"Customized":"否",
+		"Price":"",
+		"vendor":"",
+		"ProductCode":"",
+		"tp":"seating",
+		"Specific_Attributes":[
+		{
+			"适用空间":"客厅, 卧室"
+		}]
+	}]
+}

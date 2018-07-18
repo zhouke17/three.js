@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.minimum-scale=1.0,maximum-scale=1.0">-->
+	<title></title>
+	<script src="jquery-3.1.1.js"></script>
+	<script src="three.js"></script>
+	<script src="OBJLoader.js"></script>
+	<script src="JSONLoader.js"></script>
+	<script src="OrbitControls.js"></script>
+	<style>
+	body{margin:0}
+	.container{margin:0;padding:0;position:relative;overflow:hidden;}
+	.sidemenu{float:left;width:200px;background-color:grey;margin-bottom:-5000px;padding-bottom:5000px}
+	.content{position:absolute;top:0;left:200px; margin-bottom:-5000px;padding-bottom:5000px;background-color:#d9d9d9}
+	ul{font-size:0;list-style:none;text-align: center;}
+	Li{ padding:0;margin:0;height:100px;width:100px;line-height:100px;Font-size:20px;cursor:pointer;}
+	li.active{border:2px solid orange; border-radius:10px;}
+	img{ float:left;width:100px;height:100px;}
+
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	var itemarr;
+	$(document).ready(function(){
+
+		var mesh;
+		var scene = new THREE.Scene();
+
+		// create a camera, which defines where we're looking at.
+		var camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 100000);
+		scene.add(camera);
+
+		var orbitControls = new THREE.OrbitControls(camera);//轨道控件来控制对象移动、旋转。
+		orbitControls.autoRotate = true;
+		var clock = new THREE.Clock();
+
+		// create a render and set the size
+		var webGLRenderer = new THREE.WebGLRenderer();
+		webGLRenderer.setClearColor(new THREE.Color(0x96CDCD, 1.0));
+		webGLRenderer.setSize(window.innerWidth, window.innerHeight);
+		webGLRenderer.shadowMapEnabled = true;
+
+		var spotLight = new THREE.SpotLight(0xffffff);
+		spotLight.position.set(0, 5000, 2000);
+		spotLight.intensity =1;
+		spotLight.castShadow = true;
+		scene.add(spotLight);
+		var ambiLight = new THREE.AmbientLight(0x111111);
+		scene.add(ambiLight);
+
+		render();
+
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp = new XMLHttpRequest();//声明异步加载对象
+			xmlhttp.onreadystatechange = function () { //当有状态改变时进行异步加载
+				var DONE = this.DONE || 4;
+				if (this.readyState === DONE){
+					//var data = e.currentTarget.response;
+					var data = this.response;//异步获取数据
+					itemarr = JSON.parse(data);//解析 JSON字符串 为 JSON对象
+					ul = document.getElementById("domo")
+					for(var i=0;i<itemarr.length;i++){//遍历创建标签
+						var li = document.createElement("li");
+						var img= document.createElement("img");
+						img.src = itemarr[i].texture[0].image;
+						li.appendChild(img);
+						ul.appendChild(li);
+					}
+					var num=0;
+					var lis =document.getElementsByTagName('li');
+					var li=lis[0];
+					for(var i=0;i<lis.length;i++)
+					{
+						lis[i].index = i;//获得当前索引
+						lis[i].onclick = function()
+						{
+							if(mesh)
+								scene.remove(mesh);
+							document.getElementById("WebGL-output").appendChild(webGLRenderer.domElement);
+
+							num=this.index;
+							li.className='';//清空上一个黄框
+							li=lis[num];//将当前图片复制给li变量
+							lis[num].className='active';//当前的变为黄框
+
+							var texture = THREE.ImageUtils.loadTexture(itemarr[num].texture[0].textureUrl); //加载纹理
+							var loader = new THREE.OBJLoader(); //实例化记载OBJ的构造函数
+							loader.load(itemarr[num].modelUrl, function (loadedMesh) { //加载模型文件并添加到场景中
+								var material = new THREE.MeshLambertMaterial({map:texture});
+								loadedMesh.children.forEach(function (child) {
+									child.material = material;
+									child.geometry.computeFaceNormals();
+									child.geometry.computeVertexNormals();
+								});
+								mesh = loadedMesh;
+								mesh.position.set(0,-500,0);//定位物体的位置
+
+								camera.position.x = 0;
+								camera.position.y = 5000;
+								camera.position.z = 2000;
+								camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+								scene.add(mesh);
+							});
+
+
+
+
+
+						}
+					}
+
+
+				}
+			};
+
+			xmlhttp.open("GET", "./items.json" , true);//打开获取的文件，以及是否异步（true）
+			xmlhttp.send();
+		}
+
+		function render() {
+			if (mesh) {
+				mesh.rotation.y += 0.0006;
+				}
+
+			var delta = clock.getDelta();
+			orbitControls.update(delta);//更新控件
+
+			requestAnimationFrame(render);
+			webGLRenderer.render(scene, camera);
+			}
+
+	});
+</script>
+<div class="container">
+	<div class="sidemenu">
+		<ul id="domo">
+		</ul>
+	</div>
+	<div class="content">
+		<div id="WebGL-output"></div>
+	</div>
+
+</div>
+</body>
+</html>

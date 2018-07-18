@@ -1,0 +1,41 @@
+﻿{
+	"model":"FS0000101000001_02_L.gz",
+	"items": [
+	{
+		"product_id":"B16DZR000000000101",
+		"model_code":"B16DZR0000000001",
+		"mtl":"01/FS0000101000001_02_L.mtl",
+		"texture_key":[
+			"01/FS0000101000001_02_TOP.png"
+		],
+		"img_0":"01/B16DZR0000000001_00.png",
+		"img_35":"01/B16DZR0000000001_35.png",
+		"img_90":"01/B16DZR0000000001_90.png",
+		"img_top":"01/",
+		"data_source":"1",
+		"x_len":"1143",
+		"y_len":"281",
+		"z_len":"856",
+		"product_name":"鞋柜",
+		"place_of_origin":"",
+		"grade":"一级",
+		"style":"现代简约",
+		"specifications":"1143*281*856",
+		"article_number":"B16DZR0000000001",
+		"unit":"件",
+		"the_principal":"木",
+		"auxiliary":"",
+		"customized":"否",
+		"price":"1600",
+		"brand":"大自然",
+		"brand_code":"",
+		"vendor":"大自然",
+		"vendor_code":"",
+		"type_code":"010406",
+		"tp":"seating",
+		"specific_attributes":[
+		{
+			"适用空间":"客厅, 卧室"
+		}]
+	}]
+}
